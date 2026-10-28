@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "richpintor-errgrouping"
+version = "0.1.0"
+description = "对内容做归一化与分片比对，找出错误聚类与指纹上的重复项并按相似度归并"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "richpintor" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://richpintor.github.io"
+Repository = "https://github.com/richpintor/errgrouping"
+Issues = "https://github.com/richpintor/errgrouping/issues"
+
+[project.scripts]
+errgrouping = "errgrouping:main"
+
+[tool.setuptools]
+py-modules = ["errgrouping"]
